@@ -1,0 +1,289 @@
+html{
+  hight:100%;
+  font-family: "Inconsolata";
+}
+
+body{
+  margin: 0;
+  font-family: "Inconsolata";
+}
+
+nav{
+  position: fixed;
+  z-index: 5;
+  left: 0;
+  right: 0;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 10px;
+  background-color: none;
+}
+
+nav ul {
+  padding: 8px;
+  margin: 0;
+}
+
+h1,h2,h3,h4,h5,h6{
+  font-family: 'Cormorant Garamond', serif;
+}
+
+h1{
+  font-size: 130px;
+  font-weight: bold;
+  margin:0;
+}
+
+h2{
+  font-size: 60px;
+  color:#eccbb8;
+  font-weight: bold;
+}
+
+h3 {
+  font-size: 50px;
+  color: #3a51a3;
+  line-height: 95%;
+}
+
+h4{
+  font-size: 32px;
+  color: #f5f4d7;
+  background-color: #3a51a3;
+  display: inline-block;
+  margin: 0;
+  padding: 1px;
+  margin-bottom: 2rem;
+}
+
+
+h5{
+  font-size: 22px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  top:0;
+}
+
+h6{
+  font-size: 50px;
+  background-color: none;
+  font-weight: bold;
+  color: #3a51a3;
+}
+
+h5,h6{
+  margin: 5px;
+}
+
+body a{
+  letter-spacing: 6px;
+  color:#b9b9b9;
+  font-size: 18px;
+  text-decoration: none;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+p{
+line-height: 150%;
+}
+
+ul li{
+  list-style: none;
+  margin:12px 0;
+  font-size: 32px;
+  font-weight: normal;
+  letter-spacing: 5px;
+  text-decoration:none;
+}
+
+
+.top-container{
+  width: 100%;
+  margin: 0 auto;
+}
+
+.left.section{
+background-color: black;
+width: 50%;
+}
+
+.projects{
+  margin-top: 200px;
+}
+
+.projects h2{
+  color: #eccbb8;
+  margin-top: 70px;
+  margin-bottom: 50px;
+}
+
+.works-image{
+  position: relative;
+  width: 100%;
+}
+
+.projects h4 .right-align{
+  right:0;
+}
+
+.no-gutters{
+  padding: 0;
+}
+
+.projects h4{
+  position: absolute;
+  z-index: 1;
+  top:-25px;
+}
+
+.projects h4{
+  color:#f5f4d7;
+  margin-bottom: 30px;
+}
+
+.extra-gutters{
+  padding: 24px 24px;
+}
+
+.aboutme h2{
+  color:#eccbb8;
+  margin-top: 70px;
+}
+
+.aboutme h3{
+  margin: 0 0 70px 0;
+}
+
+.contact h2{
+  color:#eccbb8;
+  margin-top: 70px;
+}
+
+.main-text{
+  position: relative;
+  z-index: 3;
+  display: inline-block;
+  text-align: center;
+  margin: 0;
+  height: 120vh;
+  align-items: center;
+  padding: 0;
+  top:300px;
+
+}
+
+.navigation{
+  text-align: center;
+}
+
+.navigation li{
+  display: inline-block;
+  margin: 0 35px;
+  color: black;
+}
+
+.navigation li a{
+  text-decoration: none;
+  color: black;
+  text-transform: lowercase;
+  font-weight: normal;
+}
+
+.left-col{
+  background-color: #fff;
+  color:#fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.right-col{
+  background-color: #f5f4d7;
+  color:#3a51a3;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.scroll{
+  text-align: center;
+  font-size: 12px;
+}
+
+.right-align{
+  text-align: right;
+}
+
+img{
+  max-width: 100%;
+}
+
+footer{
+  background-color: #eccbb8;
+  height: 120px;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 180px;
+  margin-top: 80px;
+}
+
+.contact-col{
+  background-color:#fff;
+}
+
+.social-icon{
+  height: 40px;
+  margin: 10px 10px;
+}
+
+.social-icons-container{
+  text-align: center;
+}
+
+.designer-info{
+  text-align: center;
+}
+.designer-info a{
+  font-family: 'Inconsolata';
+  font-size: 18px;
+  color: #fff;
+  font-style: normal;
+  text-transform: none;
+  letter-spacing: normal;
+  font-weight: normal;
+}
+
+.button{
+  border: 1px solid black;
+  text-decoration: none;
+  color:black;
+  padding: 10px 20px;
+  margin-top: 20px;
+  display:inline-block;
+  border-radius: 1px;
+  transition: background 0.5s ease-in-out, color 0.5s ease-in-out;
+   opacity:0.5;
+}
+
+.button:hover{
+  background: #eccbb8;
+  color: #3a51a3;
+  opacity:1;
+}
+
+/*
+TO DODAŁEM JA 18.01.2021 zeby obrazki wyświetlały się pierwsze na mobilu
+ale żeby się zamieniały miejscami na desktopie */
+.invertible-row {
+  flex-direction: column-reverse;
+}
+
+@media screen and (min-width: 600px) {
+  .invertible-row {
+    flex-direction: row;
+  }
+}
