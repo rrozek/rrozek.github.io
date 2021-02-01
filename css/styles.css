@@ -1,6 +1,7 @@
 html{
   hight:100%;
   font-family: "Inconsolata";
+  scroll-behavior: smooth;
 }
 
 body{
@@ -21,6 +22,23 @@ nav{
 nav ul {
   padding: 8px;
   margin: 0;
+  cursor: pointer;
+}
+
+.mobile-menu{
+  background-color:transparent;
+  border:none;
+  color:#000;
+  font-size: 22px;
+  letter-spacing: 3px;
+  cursor:pointer;
+  padding: 20px;
+  display: none;
+  float: right;
+}
+
+.mobile-menu:focus{
+  outline:none;
 }
 
 h1,h2,h3,h4,h5,h6{
@@ -76,6 +94,11 @@ h5,h6{
 }
 
 body a{
+  color:#b9b9b9;
+  text-decoration: none;
+}
+
+.project-link {
   letter-spacing: 6px;
   color:#b9b9b9;
   font-size: 18px;
@@ -86,6 +109,10 @@ body a{
 
 p{
 line-height: 150%;
+}
+
+ul {
+  padding-inline-start: 0px
 }
 
 ul li{
@@ -149,15 +176,22 @@ width: 50%;
 .aboutme h2{
   color:#eccbb8;
   margin-top: 70px;
+  margin-top: 70px;
+  margin-bottom: 20px;
 }
 
 .aboutme h3{
-  margin: 0 0 70px 0;
+  margin: 20px 0 50px 20px;
+}
+
+.aboutme p{
+  margin-left: 20px;
 }
 
 .contact h2{
   color:#eccbb8;
   margin-top: 70px;
+  margin-bottom: 20px;
 }
 
 .main-text{
@@ -170,11 +204,16 @@ width: 50%;
   align-items: center;
   padding: 0;
   top:300px;
+}
 
+.main-text h6{
+  text-transform: none;
 }
 
 .navigation{
   text-align: center;
+  flex-wrap:wrap;
+
 }
 
 .navigation li{
@@ -263,6 +302,7 @@ footer{
   color:black;
   padding: 10px 20px;
   margin-top: 20px;
+  margin-bottom: 30px;
   display:inline-block;
   border-radius: 1px;
   transition: background 0.5s ease-in-out, color 0.5s ease-in-out;
@@ -279,11 +319,79 @@ footer{
 TO DODAŁEM JA 18.01.2021 zeby obrazki wyświetlały się pierwsze na mobilu
 ale żeby się zamieniały miejscami na desktopie */
 .invertible-row {
-  flex-direction: column-reverse;
+  flex-direction: row;
 }
 
-@media screen and (min-width: 600px) {
-  .invertible-row {
-    flex-direction: row;
+
+@media screen and (max-width: 767px) {
+  .navigation{
+    display:none;
+    flex-direction: column;
+    width:100%;
   }
+
+    .aboutme h3, .aboutme p{
+    margin-left: 0;
+    }
+
+    .invertible-row {
+    flex-direction: column-reverse;
+      }
+
+    .contact p{
+      margin-top:25px;
+    }
+
+    .contact img{
+      display: none;
+    }
+
+    .projects h3{
+      margin-left: 0;
+      padding-left: 0;
+    }
+
+    .extra-gutters {
+      padding: 40px 0 80px 0;
+    }
+
+    .mobile-menu {
+      display: block;
+    }
+}
+
+
+.navigation.show{
+  display: flex;
+}
+
+.dropdown{
+  position: relative;
+  display: block;
+}
+
+.dropdown-content {
+  display: none;
+  right: 0;
+  position: absolute;
+  background-color: #fff;
+  min-width: 100%;
+  box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  padding: 20px;
+  text-transform: lowercase;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-transform: lowercase;
+  font-weight:normal;
+  text-align: center;
+}
+
+.show {
+  display:block;
 }
