@@ -15,8 +15,8 @@ nav{
   left: 0;
   right: 0;
   font-family: 'Cormorant Garamond', serif;
-  font-size: 10px;
-  background-color: none;
+  font-size: 22px;
+  background-color: transparent;
 }
 
 nav ul {
@@ -136,7 +136,7 @@ width: 50%;
 }
 
 .projects{
-  margin-top: 200px;
+  margin-top: 20%;
 }
 
 .projects h2{
@@ -176,7 +176,6 @@ width: 50%;
 .aboutme h2{
   color:#eccbb8;
   margin-top: 70px;
-  margin-top: 70px;
   margin-bottom: 20px;
 }
 
@@ -195,15 +194,19 @@ width: 50%;
 }
 
 .main-text{
-  position: relative;
+  height: 100%;
+  width: 100%;
+
+  /* Set the height to match that of the viewport. */
+  height: 100vh;
+  left: 0;
+  right: 0;
   z-index: 3;
   display: inline-block;
   text-align: center;
   margin: 0;
-  height: 120vh;
   align-items: center;
-  padding: 0;
-  top:300px;
+  padding-top: 20%;
 }
 
 .main-text h6{
@@ -357,6 +360,10 @@ ale żeby się zamieniały miejscami na desktopie */
 
     .mobile-menu {
       display: block;
+    }
+
+    .main-text {
+      padding-top: 30%;
     }
 }
 
